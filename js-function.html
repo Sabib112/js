@@ -1,0 +1,26 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <button style="color: brown;" onclick="mycalculator(3,6,4)">submit</button><br>
+        <p id="tt"></p>
+        <button type="button" style="background-color: brown;" onclick="mysum(100,38)">result</button><br>
+        <p id="ot"></p>
+        <script>
+            function myfunction(x,y,t){
+                sum=x+y+t;
+                document.write(sum)
+            }
+            myfunction (7,8,2);
+            function mycalculator(x,y,t){
+                sum=x+y+t;
+                document.getElementById("tt").innerHTML="sum="+sum;
+            }
+            function mysum(x,y){
+                sum=x-y;
+               document.getElementById("ot").innerHTML="sum="+sum;
+            }
+            </script>
+    </body>
+</html>
