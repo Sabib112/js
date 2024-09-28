@@ -1,0 +1,17 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>this is a simple calculator</h1>
+        <p>click on the button to see the result</p>
+        <button type="button" style="color: rgb(110, 0, 0);" onclick="mysum(106,100,50,20,10)">result</button><br>
+        <p id="ot"></p>
+        <script>
+            function mysum(t,p,x,y,r){
+                sum=t/p*x-y+r;
+               document.getElementById("ot").innerHTML="sum="+sum;
+            }
+            </script>
+    </body>
+</html>
