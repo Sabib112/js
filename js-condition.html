@@ -1,0 +1,22 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p>click the button</p>
+        <button onclick="myFunction()">
+        click here</button>
+        <p id="message"> </p>
+        <script>
+            var age=20;
+            function myFunction(){
+                if (age<18){
+                    document.getElementById("message").innerHTML="you are underaged"
+                }
+                else {
+                  document.getElementById("message").innerHTML="you are adult"  
+                }
+            }
+        </script>
+    </body>
+</html>
