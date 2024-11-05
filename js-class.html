@@ -1,0 +1,25 @@
+<html>
+    <head>
+        
+     </head>
+    <body>
+        <p id="cls"></p> 
+        <p id="cls2"></p> 
+        <script>
+            class Student {
+                constructor(name,age,grade){
+                    this.name= name;
+                    this.age= age;
+                    this.grade= grade;
+                }
+
+            }
+            st1=new Student ("Sabib",12,5)
+            document.getElementById("cls").innerHTML="Name: "+st1.name+" ,age: "+st1.age+" ,grade: "+st1.grade
+
+            st2=new Student ("Ayman",12.5)
+            document.getElementById("cls2").innerHTML="Name: "+st2.name+" ,age; "+st1.age+" ,grade:"+st1.grade
+        </script>
+    </body>
+    
+</html>
