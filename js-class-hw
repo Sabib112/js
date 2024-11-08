@@ -1,0 +1,28 @@
+<html>
+    <head>
+        
+     </head>
+    <body>
+        <p id="cls"></p> 
+        <p id="cls2"></p> 
+        <script>
+            class Teacher {
+                constructor(name,age,grade){
+                    this.name= name;
+                    this.age= age;
+                    this.grade= grade;
+                }
+
+            }
+            st1=new Teacher ("Shammi Aktar",29,"4th grade form teacher")
+            document.getElementById("cls").innerHTML="Name: "+st1.name+" ,age: "+st1.age+" ,grade: "+st1.grade
+
+            st2=new Teacher (" Naznin Sultana Kabita",54,"5th grade form teacher")
+            document.getElementById("cls2").innerHTML="Name: "+st2.name+" ,age; "+st2.age+" ,grade: "+st2.grade
+
+            st3=new Teacher ("",54,"5th grade form teacher")
+            document.getElementById("cls2").innerHTML="Name: "+st3.name+" ,age; "+st3.age+" ,grade: "+st3grade
+        </script>
+    </body>
+    
+</html>
