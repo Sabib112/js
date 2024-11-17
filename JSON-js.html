@@ -1,0 +1,17 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2>
+            JSON example
+        </h2>
+        <p id="result"></p>
+        <script>
+            var myObj ={name:"Sabib",age:12,class:5};
+            var myJSON = JSON.stringify(myObj);
+            var newObj =JSON.parse(myJSON)
+            document.getElementById("result").innerHTML= newObj.name +","+newObj.age+","+newObj.class;
+        </script>
+    </body>
+</html>
