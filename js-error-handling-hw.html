@@ -1,0 +1,14 @@
+<html>
+    <head></head>
+    <body>
+        <p id="error_message"></p>
+            <script>
+                try {
+                    alert("Hello everyone");
+                }
+                catch(err){
+                    document.getElementById("error_message").innerHTML = err.message;
+                }
+            </script>
+    </body>
+</html>
