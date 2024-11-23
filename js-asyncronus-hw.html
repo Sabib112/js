@@ -1,0 +1,17 @@
+
+<head>
+</head>
+<body>
+  <h2>
+    Asyncronus example:
+  </h2>  
+  <p id="result"></p>
+  <script>
+    async function add(a,b) {
+        let response = await a+b
+        document.getElementById("result") .innerHTML= response
+    }
+    add (7,3)
+  </script>
+</body>
+</html>
