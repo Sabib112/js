@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="myform">
+        <fieldset>
+            <legend>User</legend>
+            <input placeholder="enter your name" name="name">  <br>
+            <button type="button" onclick="validateform()">submit</button>
+        </fieldset>
+    </form>
+    
+</body>
+<script>
+function validateform(){
+    var xyz= document.forms["myform"]["name"].value
+    if(xyz=="")
+{alert("enter your name")}
+
+else{document.write(xyz)}
+}
+</script>
+</html>
