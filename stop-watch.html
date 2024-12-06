@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Stop Watch</h1>
+    <div class="wraper">
+        <p><span id="sec">00</span>:<span id="milisec">00</span></p>
+        <button id="btn-start">Start</button>
+        <button id="btn-stop">Stop</button>
+        <button id="btn-reset">Reset</button>
+        <script>
+            window.onload = function(){
+                var sec =00;
+                var milisec =00;
+                var appendSeconds = document.getElementById("sec");
+                var appendMillisec = document.getElementById("milisec");
+
+                var buttonStart = document.getElementById("btn-start")
+                var buttonStop = document.getElementById("btn-stop")
+                var buttonReset = document.getElementById("btn-reset")
+                var Interval;
+                buttonStart.onclick = function(){
+                    clearInterval(Interval)
+                    Interval = setInterval(startTimer , 10)
+                
+                }
+                buttonStop.onclick = function(){
+                    clearInterval(Interval)
+                }
+                buttonReset.onclick = function(){
+                    clearInterval(Interval);
+                    milisec= "00";
+                    sec ="00";
+                    appendMillisec.innerHTML = milisec;
+                    appendSeconds.innerHTML = sec;
+                }
+                function startTimer(){
+                    milisec++;
+                if(milisec < 10){
+                    appendMillisec.innerHTML ="0"+ milisec
+                }
+                if(milisec>9){
+                    appendMillisec.innerHTML = milisec  
+                
+                }
+                if(milisec>99){
+                    sec++ ;
+                    appendSeconds.innerHTML= "0"+ sec;
+                    milisec=0;
+                    appendMillisec.innerHTML ="0"+0
+                }
+                if(sec>9){
+                    appendSeconds.innerHTML= sec;
+                }
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
