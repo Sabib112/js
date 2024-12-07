@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            font-size: 300px;
+            text-align: center;
+           cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <p>Roll the Dice</p>
+    <div id="Dice" onclick="toggleDice()"></div>
+    <script>
+        var dice;
+        var dices=['&#9856','&#9857','&#9858','&#9859','&#9860','&#9861'];
+        var isStopped= true;
+        var t;
+     function changeDiceFace(){
+        var random = Math.floor(Math.random()*6)
+        dice.innerHTML = dices[random]
+     }
+     function toggleDice(){
+        if(isStopped){
+            isStopped = false;
+            t = setInterval(changeDiceFace,100);
+        }
+        else{
+            clearInterval(t);
+            isStopped = true;
+        }   
+     }
+     window.onload = function (){
+         dice = document.getElementById('Dice')
+         changeDiceFace();
+     };
+    </script>
+</body>
+</html>
