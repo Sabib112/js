@@ -8,16 +8,21 @@
         div{
             font-size: 300px;
             text-align: center;
-           cursor: crosshair;
+        }
+        button{
+            font-size: 30px;
+            
+            cursor: crosshair;
         }
     </style>
 </head>
 <body>
     <p>Roll the Dice</p>
-    <div id="Dice" onclick="toggleDice()"></div>
+    <div id="Dice" ></div>
+    <button onclick="toggleDice()">roll</button>
     <script>
         var dice;
-        var dices=['&#9856','&#9857','&#9858','&#9859','&#9860','&#9861'];
+        var dices=['1','2','3','4','5','6'];
         var isStopped= true;
         var t;
      function changeDiceFace(){
