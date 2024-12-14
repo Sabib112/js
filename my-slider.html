@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        background-color: #deb878;
+    }
+    h1{
+        text-align: center;
+        text-decoration: underline;
+        text-transform: uppercase;
+        color: rgb(35, 115, 185);
+    }
+    .carousal-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:500px;
+    }
+    .carousal-container img{
+        width: 400px;
+        height: 200px;
+        max-height: 100%;
+        max-width:100%;
+        display: none;
+    }
+    </style>
+</head>
+<body>
+    <h1>My image slider</h1>
+   <div class="carousal-container">
+    <img class="images" src="bg1.jpeg" alt="image1">
+    <img class="images" src="bg2.jpeg" alt="image2">
+    <img class="images" src="bg3.jpeg" alt="image3">
+   </div> 
+   <script>
+    var index=0;
+    function carousal(){
+        var images= document.getElementsByClassName("images");
+   
+    for(var i = 0; i<images.length; i++){
+        images[i].style.display='none'   
+    }
+    index++
+    if (index> images.length){
+        index = 1;
+    }
+    images[index-1].style.display="block";
+    setTimeout(carousal,2000)
+    }
+    carousal();
+   </script>
+</body>
+</html>
