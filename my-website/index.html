@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+        .topnav{
+            overflow: hidden;
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+        }
+        .topnav a {
+            float: left;
+            text-align: center;
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            transition: all 0.3s;
+        }
+        .topnav a:hover{
+            background-color: #ffffff;
+            color: #333;
+            transform: scale(1.2);
+        }
+        section{
+            text-align: center;
+            margin-top: 10px;
+            padding: 10px;
+        }
+        img.mySlides{
+            height: 500px;
+            width: 80%;
+            transition: opacity 1s ease-in-out;
+        }
+        .slideshow-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 520px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #e8e8e8;
+        }
+    </style>
+</head>
+<body>
+   <header>
+    <nav class="topnav">
+        <a href="">Home</a>
+        <a href="">Gallery</a>
+        <a href="contact-us.html">Contact</a>
+        <a href="">About Us</a>
+    </nav>
+   </header> 
+   <main>
+    <section>
+        <div class="slideshow-container">
+            <img class="mySlides" src="../bg1.jpeg" alt="">
+            <img class="mySlides" src="../bg2.jpeg" alt="">
+            <img class="mySlides" src="../bg3.jpeg" alt="">
+        </div>
+    </section>
+   </main>
+   <script>
+    // Automatic Slideshow - change image every 3 seconds
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";
+      setTimeout(carousel, 3000); // Change image every 3 seconds
+    }
+    </script>
+</body>
+</html>
